@@ -1,0 +1,18 @@
+[package]
+name = "zopfli-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["Anysphere Inc."]
+
+[dependencies]
+
+[dev-dependencies]
+proptest = "1.0"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+
+[profile.bench]
+inherits = "release"
